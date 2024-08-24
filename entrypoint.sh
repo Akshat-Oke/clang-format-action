@@ -20,6 +20,7 @@ fi
 
 if [ "$1" = "false" ]; then
     echo "Formatting files..."
+    cd "$GITHUB_WORKSPACE" || exit 2
     git diff HEAD^ --name-only
     git clang-format --style="$2" --extensions="$3" -v HEAD^
     exit 0
