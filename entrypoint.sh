@@ -21,7 +21,8 @@ cd "$GITHUB_WORKSPACE" || exit 2
 
 if [ "$1" = "false" ]; then
     echo "Formatting files in directory $GITHUB_WORKSPACE..."
-    echo $( pwd )
+    echo $( ls )
+    ls
     echo "$GIHUB_WORKSPACE"
     git diff HEAD^ --name-only
     git clang-format --style="$2" --extensions="$3" -v HEAD^
