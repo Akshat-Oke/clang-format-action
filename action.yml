@@ -1,5 +1,5 @@
 ---
-name: 'Clang formatter action'
+name: 'Clang format commit action'
 description: 'run clang-format on your latest commit'
 author: 'jayllyz'
 branding:
